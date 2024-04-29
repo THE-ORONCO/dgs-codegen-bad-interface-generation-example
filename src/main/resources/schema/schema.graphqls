@@ -1,0 +1,15 @@
+
+
+interface TestInterface @annotate(name: "com.example.badinterfacegeneration.TestAnnotation"){
+    name: String!
+}
+
+type TestType @annotate(name: "com.example.badinterfacegeneration.TestAnnotation"){
+    name: String!
+}
+
+directive @annotate(name: String!, type: String, inputs: AnnotationInputs, target: String) repeatable on OBJECT | INTERFACE | FIELD_DEFINITION | INPUT_OBJECT | INPUT_FIELD_DEFINITION
+input AnnotationInputs {
+"any default for an annotation"
+value: String
+}
